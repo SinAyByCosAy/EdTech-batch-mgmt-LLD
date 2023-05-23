@@ -1,5 +1,6 @@
 package Prototype;
 
-public interface Prototype<T> {
+interface Prototype<T> {
     T copy();
+
 }

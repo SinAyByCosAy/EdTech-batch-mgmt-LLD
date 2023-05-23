@@ -32,6 +32,12 @@ public class Student implements Prototype<Student>{
         return batchName;
     }
     public Student copy(){
-        return null;
+        //private members can also be accessed
+        Student st = new Student();
+        st.name = this.name;
+        st.age = this.age;
+        st.batchName = this.batchName;
+        st.batchId = this.batchId;
+        return st;
     }
 }
