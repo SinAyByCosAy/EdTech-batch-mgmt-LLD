@@ -1,6 +1,6 @@
 package Prototype;
 
-public class Student {
+public class Student implements Prototype<Student>{
     private String name;
     private int age;
     private String batchId;
@@ -30,5 +30,8 @@ public class Student {
     }
     public String getBatchName(){
         return batchName;
+    }
+    public Student copy(){
+        return null;
     }
 }
