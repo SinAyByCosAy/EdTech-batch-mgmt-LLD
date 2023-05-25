@@ -8,9 +8,13 @@ public class IntelligentStudent extends Student{
     public int getIq(){
         return iq;
     }
+
+    public IntelligentStudent(){}
+    public IntelligentStudent(IntelligentStudent is){
+        super(is); //calling copy constructor of parent
+        this.iq = is.iq;
+    }
     public IntelligentStudent copy(){
-        Student s = super.copy();
-        ((IntelligentStudent)s).setIq(this.iq);
-        return (IntelligentStudent)s;
+        return new IntelligentStudent(this);
     }
 }

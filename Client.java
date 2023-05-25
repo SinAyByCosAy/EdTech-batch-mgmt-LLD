@@ -11,14 +11,13 @@ public class Client {
         Student copySt = st.copy();
         System.out.println(copySt.getName());
 
-        Student st2 = new IntelligentStudent();
-        st2.setName("BAC");
-        st2.setAge(24);
-        st2.setBatchName("Dec22");
-        st2.setBatchId("4");
-        ((IntelligentStudent)st2).setIq(100);
-        System.out.println(((IntelligentStudent) st2).getIq());
-        Student st3 = st2.copy();
-        System.out.println(st3);
+        Student is = new IntelligentStudent();
+        is.setName("Tanay");
+        is.setAge(24);
+        is.setBatchName("Dec22");
+        is.setBatchId("4");
+        ((IntelligentStudent)is).setIq(100);
+        Student copyIs = is.copy(); //copy of Intelligent Student will be called due to Run Time polymorphism
+        System.out.println(copyIs.getName());
     }
 }
