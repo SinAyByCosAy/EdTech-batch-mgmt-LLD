@@ -31,13 +31,16 @@ public class Student implements Prototype<Student>{
     public String getBatchName(){
         return batchName;
     }
+
+    public Student(){}
+
+    public Student(Student st){
+        this.name = st.name;
+        this.age = st.age;
+        this.batchId = st.batchId;
+        this.batchName = st.batchName;
+    }
     public Student copy(){
-        //private members can also be accessed
-        Student st = new Student();
-        st.name = this.name;
-        st.age = this.age;
-        st.batchName = this.batchName;
-        st.batchId = this.batchId;
-        return st;
+        return new Student(this);
     }
 }

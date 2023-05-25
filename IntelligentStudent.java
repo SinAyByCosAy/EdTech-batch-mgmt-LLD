@@ -9,13 +9,8 @@ public class IntelligentStudent extends Student{
         return iq;
     }
     public IntelligentStudent copy(){
-        IntelligentStudent st = new IntelligentStudent();
-        st.setName(this.getName());
-        st.setAge(this.getAge());
-        st.setBatchId(this.getBatchId());
-        st.setBatchName(this.getBatchName());
-        st.setIq(this.getIq());
-
-        return st;
+        Student s = super.copy();
+        ((IntelligentStudent)s).setIq(this.iq);
+        return (IntelligentStudent)s;
     }
 }
