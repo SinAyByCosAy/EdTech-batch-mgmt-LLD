@@ -6,7 +6,7 @@ public class StudentRegistry {
     static StudentRegistry instance;
     private StudentRegistry(){}
     public static StudentRegistry getRegistryInstance(){
-        if(instance==null) {//not thread safe though
+        if(instance==null) {//not thread safe currently
             instance = new StudentRegistry();
             return instance;
         }
